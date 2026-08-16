@@ -4,7 +4,7 @@ import React, { useState } from "react";
 import Link from "next/link";
 import { ArrowUpRight } from "lucide-react";
 
-export default function Footer() {
+export default function Footer({ className = "bg-[#141414]" }: { className?: string }) {
   const [email, setEmail] = useState("");
 
   const handleSubmit = (e: React.FormEvent) => {
@@ -18,7 +18,7 @@ export default function Footer() {
   return (
     <footer
       id="footer"
-      className="framer-kh1ao5 relative w-full bg-[#0c0c0e] text-[#fef9ff] pt-20 pb-12 px-6 sm:px-10 lg:px-16 overflow-hidden select-none"
+      className={`framer-kh1ao5 relative w-full text-[#fef9ff] pt-20 pb-12 px-6 sm:px-10 lg:px-16 overflow-hidden select-none ${className}`}
       data-framer-name="Footer"
     >
       {/* Background Ambient Radial Blue Glow Filters */}
@@ -119,27 +119,47 @@ export default function Footer() {
               </p>
             </div>
 
-            {/* Newsletter Input Form */}
-            <form
-              onSubmit={handleSubmit}
-              className="framer-1wscj2b flex items-center p-1.5 rounded-full bg-[#191919] border border-[#4555fd]/60 focus-within:border-[#4555fd] shadow-[0_0_20px_rgba(69,85,253,0.3)] max-w-md transition-all duration-300"
-            >
-              <input
-                type="email"
-                required
-                value={email}
-                onChange={(e) => setEmail(e.target.value)}
-                placeholder="Enter Your work email"
-                className="framer-form-input flex-1 bg-transparent px-5 py-3 text-sm text-[#fef9ff] placeholder-[#fef9ff]/40 focus:outline-none"
-                style={{ fontFamily: "'Inter', sans-serif" }}
-              />
-              <button
-                type="submit"
-                className="px-7 py-3 rounded-full bg-[#fef9ff] text-[#4555fd] text-sm font-semibold hover:bg-white hover:shadow-lg transition-all duration-300 shrink-0"
-                style={{ fontFamily: "'Inter', sans-serif" }}
-              >
-                Submit
-              </button>
+            {/* Newsletter Form: Single-Row Pill on Desktop (PC), Vertical Stack on Mobile */}
+            <form onSubmit={handleSubmit} className="framer-1wscj2b max-w-md w-full">
+              {/* Desktop Single-Row Pill Layout (hidden on mobile) */}
+              <div className="hidden sm:flex items-center p-1.5 rounded-full bg-transparent border border-white/25 focus-within:border-[#4555fd] shadow-[0_0_20px_rgba(69,85,253,0.2)] w-full transition-all duration-300">
+                <input
+                  type="email"
+                  required
+                  value={email}
+                  onChange={(e) => setEmail(e.target.value)}
+                  placeholder="Enter Your work email"
+                  className="flex-1 bg-transparent px-5 py-3 text-sm text-[#fef9ff] placeholder-[#fef9ff]/50 focus:outline-none"
+                  style={{ fontFamily: "'Inter', sans-serif" }}
+                />
+                <button
+                  type="submit"
+                  className="px-7 py-3 rounded-full bg-[#fef9ff] text-[#4555fd] text-sm font-semibold hover:bg-white hover:shadow-lg transition-all duration-300 shrink-0 cursor-pointer"
+                  style={{ fontFamily: "'Inter', sans-serif" }}
+                >
+                  Submit
+                </button>
+              </div>
+
+              {/* Mobile Vertical Stacked Layout (hidden on desktop) */}
+              <div className="flex sm:hidden flex-col space-y-3 w-full">
+                <input
+                  type="email"
+                  required
+                  value={email}
+                  onChange={(e) => setEmail(e.target.value)}
+                  placeholder="Enter Your work email"
+                  className="w-full bg-transparent border border-white/30 rounded-full px-6 py-3.5 text-base text-[#fef9ff] placeholder:text-[#cfcbd0]/50 focus:outline-none focus:border-[#4555fd] transition-colors"
+                  style={{ fontFamily: "'Inter', sans-serif" }}
+                />
+                <button
+                  type="submit"
+                  className="w-full py-3.5 rounded-full bg-[#fef9ff] text-[#4555fd] text-sm font-bold uppercase tracking-wider hover:bg-white transition-all duration-300 cursor-pointer text-center"
+                  style={{ fontFamily: "'Inter', sans-serif" }}
+                >
+                  SUBMIT
+                </button>
+              </div>
             </form>
           </div>
 

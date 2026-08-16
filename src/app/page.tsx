@@ -32,7 +32,7 @@ export default function Home() {
         <Pricing />
         <Testimonial />
         <FAQ />
-        <Blog />
+        <Blog limit={3} />
         <CTA />
         <Footer />
       </div>

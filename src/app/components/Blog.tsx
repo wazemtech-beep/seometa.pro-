@@ -5,7 +5,7 @@ import { motion } from "framer-motion";
 import { ArrowUpRight } from "lucide-react";
 import { GrowthPlanButton } from "./Button";
 
-export default function Blog() {
+export default function Blog({ limit }: { limit?: number }) {
   const posts = [
     {
       id: "how-to-rank-on-adobe-stock-blog-card",
@@ -37,7 +37,69 @@ export default function Blog() {
         "https://framerusercontent.com/images/M2y8gCVdzXfqCUXpsFBqVWTq2Q.png?width=1520&height=1096",
       href: "#blog-3",
     },
+    {
+      id: "ai-keyword-trend-analysis-stock-video-blog-card",
+      date: "September 24, 2025",
+      title: "AI Keyword Trend Analysis for Stock Video Contributors",
+      description:
+        "Discover high-demand search trends before competitors and optimize your footage for instant commercial sales.",
+      image:
+        "https://framerusercontent.com/images/Z0GWiEF8Uf0VyRYiTfjAv0L5Fg.png?width=1520&height=1096",
+      href: "#blog-4",
+    },
+    {
+      id: "zero-manual-data-entry-blog-card",
+      date: "September 24, 2025",
+      title: "Zero Manual Data Entry: The Future of Portfolio Tagging",
+      description:
+        "Why manual IPTC editing costs thousands in lost productivity and how AI visual recognition solves it instantly.",
+      image:
+        "https://framerusercontent.com/images/8pVzBjySLhw8t1yjZZzvkVXDyk.png?width=1520&height=1096",
+      href: "#blog-5",
+    },
+    {
+      id: "shutterstock-vs-adobe-stock-seo-blog-card",
+      date: "September 24, 2025",
+      title: "Shutterstock vs. Adobe Stock: Algorithmic Metadata Rules",
+      description:
+        "A deep dive into how different microstock search engines index titles, descriptions, and category tags.",
+      image:
+        "https://framerusercontent.com/images/ogwoNngvTSpvf85khbZfnuk1vs.png?width=1520&height=1096",
+      href: "#blog-6",
+    },
+    {
+      id: "optimizing-midjourney-art-stock-blog-card",
+      date: "September 24, 2025",
+      title: "Optimizing AI Midjourney Renders for Stock Marketplaces",
+      description:
+        "Step-by-step metadata workflow to get your AI-generated art accepted and monetized on top stock agencies.",
+      image:
+        "https://framerusercontent.com/images/znwnZ6ILUUFzvAg9JsKx6QryETk.png?width=1520&height=1096",
+      href: "#blog-7",
+    },
+    {
+      id: "vector-artists-guide-mass-tagging-blog-card",
+      date: "September 24, 2025",
+      title: "Vector Artists Guide: Mass Tagging SVG & EPS Assets",
+      description:
+        "How vector illustrators streamline metadata generation for complex graphic bundles using automated AI scripts.",
+      image:
+        "https://framerusercontent.com/images/g78qGpNlEfRTz5XUTrtiLhiKgac.png?width=1520&height=1096",
+      href: "#blog-8",
+    },
+    {
+      id: "5-title-keyword-mistakes-stock-blog-card",
+      date: "September 24, 2025",
+      title: "5 Common Title & Keyword Mistakes That Reduce Visibility",
+      description:
+        "Avoid keyword stuffing, spam tags, and vague descriptions that trigger rejection from stock review teams.",
+      image:
+        "https://framerusercontent.com/images/IE6wtrwiX9SQdoIprM2qQSkeI0.png?width=1520&height=1096",
+      href: "#blog-9",
+    },
   ];
+
+  const displayedPosts = limit ? posts.slice(0, limit) : posts;
 
   return (
     <section
@@ -82,7 +144,7 @@ export default function Blog() {
         className="framer-d9kupf grid grid-cols-1 md:grid-cols-3 gap-8 items-stretch"
         data-framer-name="Content"
       >
-        {posts.map((post, index) => (
+        {displayedPosts.map((post, index) => (
           <motion.div
             key={post.id}
             id={post.id}
