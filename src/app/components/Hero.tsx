@@ -6,7 +6,7 @@ import { BookCallButton, GrowthPlanButton } from "./Button";
 
 export default function Hero() {
   return (
-    <section id="hero-header" className="relative pt-36 pb-24 md:pt-44 md:pb-32 flex flex-col items-center justify-center text-center px-4 overflow-hidden">
+    <section id="hero-header" className="relative min-h-screen min-h-[100vh] h-[100vh] flex flex-col items-center justify-center text-center px-4 overflow-hidden pt-20 md:pt-24 pb-12">
       {/* Framer Hero Background Texture Image (Scoped strictly to Hero section) */}
       <div className="pointer-events-none absolute inset-0 z-0 opacity-60 select-none">
         <img
