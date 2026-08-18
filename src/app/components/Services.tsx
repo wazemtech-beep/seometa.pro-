@@ -75,7 +75,7 @@ export default function Services() {
             viewport={{ once: true }}
             transition={{ duration: 0.5, delay: index * 0.1 }}
             whileHover={{ y: -8 }}
-            className="relative w-full aspect-square rounded-[28px] overflow-hidden p-6 sm:p-7 flex flex-col justify-between group border border-white/10 shadow-2xl transition-all duration-300 bg-[#161618] hover:border-white/20"
+            className="relative w-full aspect-square rounded-[28px] overflow-hidden p-6 sm:p-7 flex flex-col justify-between group border border-white/10 shadow-2xl transition-[border-color] duration-300 bg-[#161618] hover:border-white/20"
           >
             {/* Top-Left Diagonal Royal Blue Spotlight Beam Glow (Framer Light Effect) */}
             <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-br from-[#4555fd]/60 via-[#4555fd]/15 to-transparent pointer-events-none opacity-80 group-hover:opacity-100 transition-opacity duration-500 z-0" />

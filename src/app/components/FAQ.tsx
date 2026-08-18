@@ -113,7 +113,7 @@ export default function FAQ() {
               viewport={{ once: true }}
               transition={{ duration: 0.4, delay: index * 0.05 }}
               onClick={() => toggleAccordion(index)}
-              className={`relative cursor-pointer transition-all duration-300 overflow-hidden ${
+              className={`relative cursor-pointer transition-[border-color,box-shadow,border-radius] duration-300 overflow-hidden ${
                 isOpen
                   ? "bg-[#1a1a1a] border border-[#4555fd] rounded-[20px] p-6 md:p-8 shadow-[0_0_25px_rgba(69,85,253,0.35)]"
                   : "bg-[#1a1a1a] border border-white/10 hover:border-white/20 rounded-[12px] p-5 md:p-6"

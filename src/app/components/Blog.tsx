@@ -152,7 +152,7 @@ export default function Blog({ limit }: { limit?: number }) {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.5, delay: index * 0.12 }}
-            className="framer-e2u7o6-container group relative rounded-[20px] bg-[#191919] border border-white/10 p-6 lg:p-7 flex flex-col justify-between overflow-hidden shadow-2xl transition-all duration-300 hover:border-white/25 cursor-pointer"
+            className="framer-e2u7o6-container group relative rounded-[20px] bg-[#191919] border border-white/10 p-6 lg:p-7 flex flex-col justify-between overflow-hidden shadow-2xl transition-[border-color] duration-300 hover:border-white/25 cursor-pointer"
           >
             {/* Top Royal Blue Light Glow on Hover (Framer Ambient Light effect) */}
             <div className="absolute top-0 inset-x-0 h-44 bg-gradient-to-b from-[#4555fd]/25 via-[#4555fd]/5 to-transparent pointer-events-none opacity-0 group-hover:opacity-100 transition-opacity duration-500 rounded-t-[20px] z-0" />
@@ -215,7 +215,7 @@ export default function Blog({ limit }: { limit?: number }) {
 
               {/* Main Image Blur & Blue Shade (ONLY REVEALS ON CARD HOVER) */}
               <div
-                className="framer-1g5e9hz absolute inset-0 rounded-[16px] pointer-events-none opacity-0 group-hover:opacity-100 transition-all duration-500 backdrop-blur-[2.5px] z-10"
+                className="framer-1g5e9hz absolute inset-0 rounded-[16px] pointer-events-none opacity-0 group-hover:opacity-100 transition-opacity duration-500 backdrop-blur-[2.5px] z-10"
                 data-framer-name="Main Image Blur"
                 style={{
                   background:

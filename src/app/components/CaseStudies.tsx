@@ -88,7 +88,7 @@ export default function CaseStudies() {
               onClick={() => setActiveIndex(index)}
               layout
               transition={{ duration: 0.5, ease: [0.16, 1, 0.3, 1] }}
-              className={`relative rounded-[24px] overflow-hidden cursor-pointer border border-white/10 flex transition-all duration-500 ${
+              className={`relative rounded-[24px] overflow-hidden cursor-pointer border border-white/10 flex transition-[flex,background-color] duration-500 ${
                 isActive
                   ? "flex-[3.5] bg-[#191919] p-7 lg:p-8 shadow-2xl"
                   : "flex-[0.6] bg-[#191919]/60 hover:bg-[#191919] p-3"
@@ -110,7 +110,7 @@ export default function CaseStudies() {
               <div className="w-full h-full flex flex-row gap-6 relative z-10 items-stretch">
                 {/* Image Section */}
                 <div
-                  className={`relative rounded-[20px] overflow-hidden transition-all duration-500 shrink-0 ${
+                  className={`relative rounded-[20px] overflow-hidden transition-[width] duration-500 shrink-0 ${
                     isActive ? "w-[48%] h-full" : "w-full h-full"
                   }`}
                 >

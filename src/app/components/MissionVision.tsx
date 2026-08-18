@@ -31,7 +31,7 @@ export default function MissionVision() {
             viewport={{ once: true }}
             transition={{ duration: 0.6, delay: index * 0.15, ease: [0.16, 1, 0.3, 1] }}
             whileHover={{ y: -6 }}
-            className="relative rounded-[32px] md:rounded-[40px] bg-[#191919] border border-white/10 p-8 sm:p-10 md:p-12 flex flex-col justify-between group overflow-hidden shadow-2xl transition-all duration-300 min-h-[380px]"
+            className="relative rounded-[32px] md:rounded-[40px] bg-[#191919] border border-white/10 p-8 sm:p-10 md:p-12 flex flex-col justify-between group overflow-hidden shadow-2xl transition-[border-color] duration-300 min-h-[380px]"
           >
             {/* Ambient Royal Blue Glow on Hover */}
             <div

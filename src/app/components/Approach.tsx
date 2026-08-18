@@ -113,7 +113,7 @@ export default function Approach() {
               viewport={{ once: true }}
               transition={{ duration: 0.6, delay: index * 0.1, ease: [0.16, 1, 0.3, 1] }}
               whileHover={{ y: -6 }}
-              className="relative rounded-[24px] bg-[#191919] border border-white/10 p-6 sm:p-8 md:p-10 shadow-2xl flex flex-col sm:flex-row gap-6 md:gap-8 items-start group overflow-hidden transition-all duration-300"
+              className="relative rounded-[24px] bg-[#191919] border border-white/10 p-6 sm:p-8 md:p-10 shadow-2xl flex flex-col sm:flex-row gap-6 md:gap-8 items-start group overflow-hidden transition-[border-color] duration-300"
             >
               {/* Ambient Royal Blue Glow Accent */}
               <div

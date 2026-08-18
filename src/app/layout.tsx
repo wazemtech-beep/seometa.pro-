@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Inter, Instrument_Serif } from "next/font/google";
 import "./globals.css";
 import SmoothScroll from "./components/SmoothScroll";
+import PageTransition from "./components/PageTransition";
 
 const inter = Inter({ subsets: ["latin"] });
 const instrumentSerif = Instrument_Serif({
@@ -22,9 +23,11 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className={`dark scroll-smooth ${instrumentSerif.variable}`}>
+    <html lang="en" className={`dark ${instrumentSerif.variable}`}>
       <body className={`${inter.className} bg-[#07090e] text-slate-100 antialiased selection:bg-indigo-500 selection:text-white`}>
-        <SmoothScroll>{children}</SmoothScroll>
+        <SmoothScroll>
+          <PageTransition>{children}</PageTransition>
+        </SmoothScroll>
       </body>
     </html>
   );

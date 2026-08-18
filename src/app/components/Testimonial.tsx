@@ -174,7 +174,7 @@ export default function Testimonial() {
 
       {/* 2. Full-Width Peeking Slider Track (Matching Reference Image 1) */}
       <div
-        className="framer-7aoqoh relative w-full overflow-hidden py-2"
+        className="framer-7aoqoh relative w-full overflow-hidden py-2 cursor-grab active:cursor-grabbing"
         data-framer-name="Slider Wrapper"
       >
         <motion.div
@@ -202,10 +202,10 @@ export default function Testimonial() {
                   setEnableTransition(true);
                   setCurrentIndex(index);
                 }}
-                className={`shrink-0 flex-none transition-all duration-500 ${
+                className={`shrink-0 flex-none transition-[opacity,transform] duration-500 cursor-grab active:cursor-grabbing ${
                   isActive
-                    ? "opacity-100 scale-100 z-20 cursor-default"
-                    : "opacity-45 hover:opacity-75 scale-[0.98] cursor-pointer z-10"
+                    ? "opacity-100 scale-100 z-20"
+                    : "opacity-45 hover:opacity-75 scale-[0.98] z-10"
                 }`}
                 style={{
                   width: `${cardWidth}px`,
@@ -252,13 +252,14 @@ export default function Testimonial() {
                       <div>
                         {/* Quote Icon PNG */}
                         <div
-                          className="framer-co1opj relative w-9 h-9 mb-4"
+                          className="framer-co1opj relative w-9 h-9 mb-4 pointer-events-none select-none"
                           data-framer-name="Quotes"
                         >
                           <img
                             src={item.quoteIcon}
                             alt="Testimonial Quotes Icon"
-                            className="w-full h-full object-contain"
+                            className="w-full h-full object-contain pointer-events-none select-none"
+                            draggable={false}
                           />
                         </div>
 
@@ -327,7 +328,8 @@ export default function Testimonial() {
                         <img
                           src={item.image}
                           alt={item.author}
-                          className="w-full h-full object-cover object-center transition-transform duration-700 hover:scale-105"
+                          className="w-full h-full object-cover object-center transition-transform duration-700 hover:scale-105 pointer-events-none select-none"
+                          draggable={false}
                         />
                       </div>
                     </div>

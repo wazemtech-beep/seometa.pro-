@@ -134,7 +134,7 @@ export default function Pricing() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.6, delay: index * 0.15 }}
-                className="relative rounded-[22px] p-6 lg:p-7 flex flex-col justify-between group transition-all duration-300 border border-white/10 bg-[#191919] hover:border-white/20 z-0"
+                className="relative rounded-[22px] p-6 lg:p-7 flex flex-col justify-between group transition-[border-color] duration-300 border border-white/10 bg-[#191919] hover:border-white/20 z-0"
               >
                 {/* Header (Name & Price) */}
                 <div className="pb-6 border-b border-white/10 mb-6 relative z-10">
@@ -249,7 +249,7 @@ export default function Pricing() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.6, delay: index * 0.15 }}
-              className="relative rounded-[32px] p-2 bg-[#4555fd] flex flex-col justify-between group z-20 md:-translate-y-6 md:scale-[1.08] lg:scale-[1.10] shadow-2xl transition-all duration-300"
+              className="relative rounded-[32px] p-2 bg-[#4555fd] flex flex-col justify-between group z-20 md:-translate-y-6 md:scale-[1.08] lg:scale-[1.10] shadow-2xl transition-shadow duration-300"
               style={{
                 boxShadow: "0 0 60px rgba(69, 85, 253, 0.85)",
               }}

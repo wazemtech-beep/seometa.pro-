@@ -138,7 +138,7 @@ export default function ContactForm() {
           className="framer-mj3i6y w-full max-w-[780px] grid grid-cols-1 sm:grid-cols-2 gap-5 text-left"
         >
           {/* Box 1: Location Card (framer-jqx3jb) */}
-          <div className="framer-jqx3jb bg-[#181818] border border-white/5 rounded-[24px] p-7 sm:p-8 flex flex-col justify-start shadow-xl hover:border-white/15 transition-all duration-300">
+          <div className="framer-jqx3jb bg-[#181818] border border-white/5 rounded-[24px] p-7 sm:p-8 flex flex-col justify-start shadow-xl hover:border-white/15 transition-[border-color] duration-300">
             <div className="flex items-center gap-2 mb-3">
               <MapPin className="w-5 h-5 text-[#4555fd] stroke-[2]" />
               <span
@@ -162,7 +162,7 @@ export default function ContactForm() {
           </div>
 
           {/* Box 2: Email Card (framer-1u5oww2) */}
-          <div className="framer-1u5oww2 bg-[#181818] border border-white/5 rounded-[24px] p-7 sm:p-8 flex flex-col justify-start shadow-xl hover:border-white/15 transition-all duration-300">
+          <div className="framer-1u5oww2 bg-[#181818] border border-white/5 rounded-[24px] p-7 sm:p-8 flex flex-col justify-start shadow-xl hover:border-white/15 transition-[border-color] duration-300">
             <div className="flex items-center gap-2 mb-3">
               <Mail className="w-5 h-5 text-[#4555fd] stroke-[2]" />
               <span
